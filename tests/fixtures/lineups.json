@@ -1,0 +1,12 @@
+{"home": {"players": [
+   {"player": {"id": 101, "name": "Arquero Uno", "position": "G"}, "position": "G", "substitute": false,
+    "statistics": {"minutesPlayed": 90, "rating": 7.4}},
+   {"player": {"id": 102, "name": "Defensa Dos", "position": "D"}, "position": "D", "substitute": false,
+    "statistics": {"minutesPlayed": 60, "rating": 5.9, "goals": 1}},
+   {"player": {"id": 103, "name": "Suplente Tres", "position": "M"}, "position": "M", "substitute": true,
+    "statistics": {}}
+ ]},
+ "away": {"players": [
+   {"player": {"id": 201, "name": "Delantero Uno", "position": "F"}, "position": "F", "substitute": false,
+    "statistics": {"minutesPlayed": 45, "rating": 6.1, "goalAssist": 0}}
+ ]}}

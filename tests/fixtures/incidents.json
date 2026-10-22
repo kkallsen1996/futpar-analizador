@@ -1,0 +1,7 @@
+{"incidents": [
+  {"incidentType": "card", "incidentClass": "yellow", "player": {"id": 102}},
+  {"incidentType": "card", "incidentClass": "yellowRed", "player": {"id": 102}},
+  {"incidentType": "card", "incidentClass": "red", "player": {"id": 201}},
+  {"incidentType": "goal", "player": {"id": 102}},
+  {"incidentType": "period", "text": "HT"}
+]}

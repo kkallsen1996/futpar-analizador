@@ -1,0 +1,54 @@
+# Reglamento de FutPar Fantasy (capturas de la app del 21/10/2026).
+# Los admins pueden cambiar las reglas en cualquier momento: si cambian, se edita
+# este archivo y no el código.
+
+presupuesto_millones: 120
+titulares: 11
+suplentes: 5
+max_por_club: 3
+reemplazos_por_fecha: 3      # solo con suplentes del banco que todavía no tengan puntaje
+costo_cambio_formacion_monedas: 2
+
+puntos:
+  minutos_jugados: 1          # jugó al menos 1 minuto
+  asistencia: 3
+  doble_amarilla: -3
+  roja_directa: -6
+  capitan_multiplicador: 2
+  booster_multiplicador: 2
+  gol:
+    ARQ: 6
+    DEF: 6
+    MED: 5
+    DEL: 4
+  imbatibilidad:
+    puntos: 4
+    # El reglamento solo nombra a "Defensas", pero el usuario confirmó (22/10/2026) que los arqueros también suman.
+    posiciones: [ARQ, DEF]
+    # El reglamento no dice minutos mínimos. PENDIENTE confirmar con un caso real.
+    minutos_minimos: 1
+
+# Nota SofaScore -> puntos. Cada fila es (nota mínima, puntos); se toma la primera
+# fila cuya nota mínima sea <= a la nota del jugador. Debajo de 5.0 vale "piso".
+rating:
+  # PENDIENTE: cómo redondea Futpar una nota con más de un decimal (7.95).
+  # "redondear" = mitad hacia arriba a 1 decimal; "truncar" = corta a 1 decimal.
+  redondeo: redondear
+  piso: -4
+  escala:
+    - [9.3, 12]
+    - [8.6, 11]
+    - [8.0, 10]
+    - [7.8, 9]
+    - [7.6, 8]
+    - [7.4, 7]
+    - [7.2, 6]
+    - [7.0, 5]
+    - [6.8, 4]
+    - [6.6, 3]
+    - [6.4, 2]
+    - [6.2, 1]
+    - [6.0, 0]
+    - [5.8, -1]
+    - [5.4, -2]
+    - [5.0, -3]
