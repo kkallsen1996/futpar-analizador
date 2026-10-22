@@ -1,0 +1,8 @@
+{"events": [
+  {"id": 5001, "roundInfo": {"round": 14}, "startTimestamp": 1761000000, "status": {"type": "finished"},
+   "homeTeam": {"id": 1, "name": "Olimpia"}, "awayTeam": {"id": 2, "name": "Sportivo Trinidense"},
+   "homeScore": {"current": 2}, "awayScore": {"current": 0}},
+  {"id": 5002, "roundInfo": {"round": 14}, "startTimestamp": 1761100000, "status": {"type": "notstarted"},
+   "homeTeam": {"id": 3, "name": "Cerro Porteño"}, "awayTeam": {"id": 4, "name": "Sportivo San Lorenzo"},
+   "homeScore": {}, "awayScore": {}}
+]}
