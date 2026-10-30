@@ -9,7 +9,7 @@ Propuesta completa: https://claude.ai/artifact/Nd2wffgTn6yrXskS11b5t3
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate        # en Windows: .venv\Scripts\activate
-pip install -e '.[dev]'
+pip install -e ".[dev]"   # comillas dobles: con simples falla en Windows
 pytest                            # tienen que pasar todos
 ```
 
@@ -23,6 +23,10 @@ futpar puntos --posicion DEF --minutos 90 --rating 8.2 --goles 1 --recibidos 0 -
 ```
 
 `descargar` espera 3 segundos entre peticiones y guarda todo en `data/cache/`, así una segunda corrida no vuelve a pedir lo que ya tiene. Los partidos sin terminar no se cachean.
+
+## Si SofaScore responde 403
+
+SofaScore rechaza los pedidos que no vienen de un navegador común, también desde una conexión de casa, así que reintentar no lo arregla. Para ver si los datos se pueden leer, abrí en Chrome https://api.sofascore.com/api/v1/unique-tournament/11541/seasons : si se ve un texto con `"seasons"`, el navegador sí tiene acceso y la carga se puede hacer guardando esas páginas a mano.
 
 ## Reglas
 
