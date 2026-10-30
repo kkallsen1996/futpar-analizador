@@ -83,7 +83,10 @@ class ClienteSofaScore:
         resp = self._http.get(BASE + ruta)
         self._ultimo = time.monotonic()
         if resp.status_code == 403:
-            raise ErrorSofaScore(f"SofaScore bloqueó la petición (403) en {ruta}; esperar antes de reintentar")
+            raise ErrorSofaScore(
+                f"SofaScore rechazó la petición (403) en {ruta}. Bloquea los programas que no son un "
+                "navegador, así que reintentar no sirve; ver README, sección 'Si SofaScore responde 403'"
+            )
         if resp.status_code == 404:
             raise ErrorSofaScore(f"No existe en SofaScore: {ruta}")
         resp.raise_for_status()
